@@ -7,65 +7,64 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Threading;
+using System.Threading.Tasks;
+using BackgroundWorkerSampleCSharp.lib1;
 
 
 namespace BackgroundWorkerSampleCSharp
 {
     public partial class Form1 : Form
     {
+        #region field
+
+        private Test t;
+
+        #endregion
+
         public Form1()
         {
             InitializeComponent();
+
+            t = new Test();
         }
 
         private void StartButton_Click(object sender, EventArgs e)
         {
+
+            Console.WriteLine("=============>>> StartButton btn is clicked ");
+
+            Test__();
+
+
             // Start BackgroundWorker
-            backgroundWorker1.RunWorkerAsync(2000);
+            //backgroundWorker1.RunWorkerAsync(2000);
+
+
+        }
+
+        private async void Test__()
+        {
+            Task<int> calTask = t.Calculator();
+            int rs = await calTask;
+
+            Console.WriteLine("================>> RESULT : " + rs);
         }
 
         private void StopButton_Click(object sender, EventArgs e)
         {
             // Cancel BackgroundWorker
-            if (!backgroundWorker1.IsBusy)
-                backgroundWorker1.CancelAsync();
+            //if (!backgroundWorker1.IsBusy)
+            //{
+            //    backgroundWorker1.CancelAsync();
+            //}
+
+            Console.WriteLine("=============>>> stop is clicked ");
+
         }
 
-        private void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
-        {
-            BackgroundWorker helperBW = sender as BackgroundWorker;
-            int arg = (int)e.Argument;
-            e.Result = BackgroundProcessLogicMethod(helperBW, arg);
-            if (helperBW.CancellationPending)
-            {
-                e.Cancel = true;
-            }
-        }
 
-        // Put all of background logic that is taking too much time
-        private int BackgroundProcessLogicMethod(BackgroundWorker bw, int a)
-        {
-            int result = 0;
-            Thread.Sleep(5000);
-            //MessageBox.Show("I was doing some work in the background.");
-            Console.WriteLine("I was doing some work in the background.");
-            return result;
-        }
 
-        private void backgroundWorker1_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
-        {
-            //if (e.Cancelled) MessageBox.Show("Operation was canceled");
-            if (e.Cancelled) Console.WriteLine("Operation was canceled");
-            else if (e.Error != null)
-            {
-                Console.WriteLine("error : " + e.Error.Message);
-            }
-            //MessageBox.Show(e.Error.Message);
-            else
-            {
-                Console.WriteLine("result : " + e.Result.ToString());
-                //MessageBox.Show(e.Result.ToString());
-            }
-        }
+
+
     }
 }
