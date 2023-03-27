@@ -1,0 +1,10 @@
+D:\GitWork\CSharpExample\NotifyChanged\NotifyChanged\NotifyChanged\bin\Debug\NotifyChanged.exe.config
+D:\GitWork\CSharpExample\NotifyChanged\NotifyChanged\NotifyChanged\bin\Debug\NotifyChanged.exe
+D:\GitWork\CSharpExample\NotifyChanged\NotifyChanged\NotifyChanged\bin\Debug\NotifyChanged.pdb
+D:\GitWork\CSharpExample\NotifyChanged\NotifyChanged\NotifyChanged\obj\Debug\NotifyChanged.csproj.AssemblyReference.cache
+D:\GitWork\CSharpExample\NotifyChanged\NotifyChanged\NotifyChanged\obj\Debug\NotifyChanged.csproj.SuggestedBindingRedirects.cache
+D:\GitWork\CSharpExample\NotifyChanged\NotifyChanged\NotifyChanged\obj\Debug\NotifyChanged.Properties.Resources.resources
+D:\GitWork\CSharpExample\NotifyChanged\NotifyChanged\NotifyChanged\obj\Debug\NotifyChanged.csproj.GenerateResource.cache
+D:\GitWork\CSharpExample\NotifyChanged\NotifyChanged\NotifyChanged\obj\Debug\NotifyChanged.csproj.CoreCompileInputs.cache
+D:\GitWork\CSharpExample\NotifyChanged\NotifyChanged\NotifyChanged\obj\Debug\NotifyChanged.exe
+D:\GitWork\CSharpExample\NotifyChanged\NotifyChanged\NotifyChanged\obj\Debug\NotifyChanged.pdb
