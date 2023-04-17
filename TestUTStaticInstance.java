@@ -4,15 +4,17 @@ public class TestUTStaticInstance {
     public static void main(String[] args) {
 
         TestUTStaticInstance test1 = new TestUTStaticInstance();
-        TestUTStaticInstance test2 = new TestUTStaticInstance();
-        TestUTStaticInstance test3 = new TestUTStaticInstance();
-
         test1.setInstance1();
+
+        TestUTStaticInstance test2 = new TestUTStaticInstance();
         test2.setInstance2();
+
+        TestUTStaticInstance test3 = new TestUTStaticInstance();
         test3.setInstance3();
 
-        test1.test();
+        test1.setInstance1a();
 
+        test1.test();
     }
 
     private class UTStaticInstance {
@@ -61,6 +63,12 @@ public class TestUTStaticInstance {
     private void setInstance3() {
         UTStaticInstance u3 = new UTStaticInstance("C", 60, "Female");
         setData("3", u3);
+    }
+
+    private void setInstance1a() {
+        UTStaticInstance u1 = new UTStaticInstance("A", 25, "Man");
+
+        setData("1", u1);
     }
 
     private void test()  {
